@@ -13,9 +13,9 @@ namespace HOTELpinSight
         /// <returns></returns>
         internal static IWebDriver Create()
         {
-            // IWebDriver driver = CreateChromeDriver();
+            IWebDriver driver = CreateChromeDriver();
             // IWebDriver driver = CreateIEDriver();
-            IWebDriver driver = CreateFirefoxDriver();
+            // IWebDriver driver = CreateFirefoxDriver();
             return driver;
         }
 
