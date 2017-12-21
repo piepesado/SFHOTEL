@@ -71,10 +71,28 @@ namespace HOTELpinSight.Pages
             return new LoginPage(driver);
         }
 
+        /// <summary>
+        /// Click the login button.
+        /// </summary>
+        /// <returns></returns>
         public HotelSearchPage Login()
         {
             _signInButton.Click();
             return new HotelSearchPage(_driver);
+        }
+
+        /// <summary>
+        /// Log into the application using the given credentials.
+        /// </summary>
+        /// <param name="username"></param>
+        /// <param name="password"></param>
+        /// <returns></returns>
+        public HotelSearchPage Login(string username, string password)
+        {
+            this.Username = "testuser@mailinator.com";
+            this.Password = "Test@123";
+            HotelSearchPage hotelSearchPage = Login();
+            return hotelSearchPage;
         }
     }
 }

@@ -45,6 +45,9 @@ namespace HOTELpinSight.Pages
         [FindsBy(How = How.Id, Using = "search")]
         private IWebElement _searchButton;
 
+        //[FindsBy(How = How.Name, Using = "check-in-date")]
+        //private IWebElement _checkinDate;
+
         public void Search(string value)
         {               
                 _search.SendKeys(value);            

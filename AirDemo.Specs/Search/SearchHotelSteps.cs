@@ -13,7 +13,8 @@ namespace HOTELpinSight.Pages
         /// <summary>
         /// Web Driver
         /// </summary>
-        private IWebDriver _driver;        
+        private IWebDriver _driver;
+        private LoginPage _loginPage;
         private HotelSearchPage _hotelSearchPage; //Check how to instanciate should be sth like new HotelSearchPage
         private SearchingPage _searchingPage;
         private ResultsPage _resultsPage;
@@ -21,19 +22,23 @@ namespace HOTELpinSight.Pages
         [Given(@"That Im logged in at pinSight")]
         public void GivenThatImLoggedInAtPinSight()
         {
-            Given("Given that I navigate to pinSight application");
-            Given("And I enter testuser@mailinator.com as the username");
-            Given("I enter the password");
-            When("I press login");
-            Then("I should land on the Hotel page");
-            //Assert.IsTrue(_driver.Title.Equals("P UAT Agency(987654) :: Home"));
+            //Given("Given that I navigate to pinSight application");
+            //Given("And I enter testuser@mailinator.com as the username");
+            //Given("I enter the password");
+            //When("I press login");
+            //Then("I should land on the Hotel page");
+
+
+            _driver = WebDriverFactory.Create();
+            _loginPage = LoginPage.NavigateTo(_driver);
+            _hotelSearchPage = _loginPage.Login("testuser@mailinator.com", "Test@123");
+            Assert.IsTrue(_driver.Title.Equals("P UAT Agency(987654) :: Home"));
         }
-        
+
         [Given(@"I have entered (.*) as the city")]
         public void GivenIHaveEnteredCity(string search)
         {
-            _hotelSearchPage.Search(search);          
-            
+            _hotelSearchPage.Search(search);                      
         }
         
         [Given(@"I have entered checkin date")]
