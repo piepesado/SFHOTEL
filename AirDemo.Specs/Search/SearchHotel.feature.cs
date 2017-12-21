@@ -17,9 +17,9 @@ namespace AirDemo.Specs.Search
     
     [System.CodeDom.Compiler.GeneratedCodeAttribute("TechTalk.SpecFlow", "2.2.0.0")]
     [System.Runtime.CompilerServices.CompilerGeneratedAttribute()]
-    [TechTalk.SpecRun.FeatureAttribute("SearchHotel", new string[] {
-            "FullRegression"}, Description="\tIn order to search for an hotel room\r\n\tAs a pinSight user\r\n\tI want search hotel " +
-        "results to be displayed on screen", SourceFile="Search\\SearchHotel.feature", SourceLine=1)]
+    [NUnit.Framework.TestFixtureAttribute()]
+    [NUnit.Framework.DescriptionAttribute("SearchHotel")]
+    [NUnit.Framework.CategoryAttribute("FullRegression")]
     public partial class SearchHotelFeature
     {
         
@@ -28,7 +28,7 @@ namespace AirDemo.Specs.Search
 #line 1 "SearchHotel.feature"
 #line hidden
         
-        [TechTalk.SpecRun.FeatureInitialize()]
+        [NUnit.Framework.OneTimeSetUpAttribute()]
         public virtual void FeatureSetup()
         {
             testRunner = TechTalk.SpecFlow.TestRunnerManager.GetTestRunner();
@@ -38,18 +38,19 @@ namespace AirDemo.Specs.Search
             testRunner.OnFeatureStart(featureInfo);
         }
         
-        [TechTalk.SpecRun.FeatureCleanup()]
+        [NUnit.Framework.OneTimeTearDownAttribute()]
         public virtual void FeatureTearDown()
         {
             testRunner.OnFeatureEnd();
             testRunner = null;
         }
         
+        [NUnit.Framework.SetUpAttribute()]
         public virtual void TestInitialize()
         {
         }
         
-        [TechTalk.SpecRun.ScenarioCleanup()]
+        [NUnit.Framework.TearDownAttribute()]
         public virtual void ScenarioTearDown()
         {
             testRunner.OnScenarioEnd();
@@ -73,8 +74,9 @@ namespace AirDemo.Specs.Search
 #line hidden
         }
         
-        [TechTalk.SpecRun.ScenarioAttribute("Search Hotel main path", new string[] {
-                "search"}, SourceLine=10)]
+        [NUnit.Framework.TestAttribute()]
+        [NUnit.Framework.DescriptionAttribute("Search Hotel main path")]
+        [NUnit.Framework.CategoryAttribute("search")]
         public virtual void SearchHotelMainPath()
         {
             TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Search Hotel main path", new string[] {
@@ -95,12 +97,6 @@ this.FeatureBackground();
  testRunner.Then("Hotel search results should be displayed on screen", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
             this.ScenarioCleanup();
-        }
-        
-        [TechTalk.SpecRun.TestRunCleanup()]
-        public virtual void TestRunCleanup()
-        {
-            TechTalk.SpecFlow.TestRunnerManager.GetTestRunner().OnTestRunEnd();
         }
     }
 }
