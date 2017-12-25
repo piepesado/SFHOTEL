@@ -32,7 +32,7 @@ namespace HOTELpinSight.Pages
             _driver = WebDriverFactory.Create();
             _loginPage = LoginPage.NavigateTo(_driver);
             _hotelSearchPage = _loginPage.Login("testuser@mailinator.com", "Test@123");
-            Assert.IsTrue(_driver.Title.Equals("P UAT Agency(987654) :: Home"));
+            //Assert.IsTrue(_driver.Title.Equals("P UAT Agency(987654) :: Home"));
         }
 
         [Given(@"I have entered (.*) as the city")]
@@ -42,22 +42,21 @@ namespace HOTELpinSight.Pages
         }
         
         [Given(@"I have entered checkin date")]
-        public void GivenIHaveEnteredCheckinDate(string checkIn)
+        public void GivenIHaveEnteredCheckinDate()
         {
-            _hotelSearchPage.SelectCheckIn();
+            //_hotelSearchPage.SelectCheckIn();
         }
         
         [Given(@"I have entered checkout date")]
-        public void GivenIHaveEnteredCheckoutDate(string checkOut)
+        public void GivenIHaveEnteredCheckoutDate()
         {
-            //_hotelSearchPage.EnterCheckOut = checkOut;
-            
+            _hotelSearchPage.SelectCheckOut();            
         }
         
         [When(@"I click on Search button")]
         public void WhenIClickOnSearchButton()
         {
-            _hotelSearchPage.ClickSearchHotel();
+            //_hotelSearchPage.ClickSearchHotel();
         }
         
         [Then(@"Hotel search results should be displayed on screen")]

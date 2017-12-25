@@ -41,8 +41,7 @@ namespace HOTELpinSight.Pages
             {
                 _passWord.SendKeys(value);
             }
-        }
-        
+        }        
 
         /// <summary>
         /// Constructor
@@ -89,8 +88,8 @@ namespace HOTELpinSight.Pages
         /// <returns></returns>
         public HotelSearchPage Login(string username, string password)
         {
-            this.Username = "testuser@mailinator.com";
-            this.Password = "Test@123";
+            this.Username = username;
+            this.Password = password;
             HotelSearchPage hotelSearchPage = Login();
             return hotelSearchPage;
         }

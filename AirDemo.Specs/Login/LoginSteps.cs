@@ -17,7 +17,7 @@ namespace HOTELpinSight.Specs.Login
         private HotelSearchPage _hotelSearchPage;
 
         [Given(@"Given that I navigate to pinSight application")]
-        public void GivenGivenThatINavigateToTheTravelNXTApplication()
+        public void GivenGivenThatINavigateToThepinSightApplication()
         {
             _driver = WebDriverFactory.Create();
             _loginPage = LoginPage.NavigateTo(_driver);

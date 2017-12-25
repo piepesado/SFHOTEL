@@ -27,7 +27,6 @@ namespace HOTELpinSight.Pages
             WebDriverWait wait = new WebDriverWait(_driver, TimeSpan.FromSeconds(60));
             wait.Until(ExpectedConditions.ElementToBeClickable(loader));
         }
-
     }
 }
 
