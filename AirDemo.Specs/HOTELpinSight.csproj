@@ -79,7 +79,6 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Search\SearchHotelSteps.cs" />
     <Compile Include="SeleniumExtensions.cs" />
-    <Compile Include="SimpleTest\SimpleTest.cs" />
     <Compile Include="WebDriverFactory.cs" />
   </ItemGroup>
   <ItemGroup>
