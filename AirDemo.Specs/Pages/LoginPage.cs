@@ -10,8 +10,7 @@ namespace HOTELpinSight.Pages
     /// The login page for the pinSight Hotel platform.
     /// </summary>
     public class LoginPage : BasePage
-    {
-        //private const string PAGE_URL = "https://uat-parallel-managetlg.travelnxt.com/Login";
+    {       
 
         [FindsBy(How = How.Id, Using = "userName")]
         private IWebElement _username;

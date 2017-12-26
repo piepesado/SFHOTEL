@@ -65,6 +65,8 @@ namespace HOTELpinSight.Pages
             selectLoc.Perform();
         }
 
+        //Calendars
+
         public void SelectCheckIn()
         {
             //WaitForElementVisible(_checkInDatePicker);
@@ -137,10 +139,12 @@ namespace HOTELpinSight.Pages
         }
         */
 
+        /*
         public void ClickSearchHotel()
         {
             _searchButton.Click();
         }
+        */
 
         public void EnsurePageIsLoaded()
         {
@@ -148,7 +152,7 @@ namespace HOTELpinSight.Pages
             wait.Until(ExpectedConditions.ElementToBeClickable(_backOfficeButton));
         }
 
-        public SearchingPage Login()
+        public SearchingPage ClickSearch()
         {
             _searchButton.Click();
             return new SearchingPage(_driver);

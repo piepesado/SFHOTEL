@@ -32,13 +32,14 @@ namespace HOTELpinSight.Pages
             _driver = WebDriverFactory.Create();
             _loginPage = LoginPage.NavigateTo(_driver);
             _hotelSearchPage = _loginPage.Login("hnorte@travelleaders.com", "zaq1ZAQ!");
-            //Assert.IsTrue(_driver.Title.Equals("Login"));            
-            //Assert.IsTrue(_driver.Url.Equals("https://qa-tlg.travelnxt.com/Login"));
+            Assert.IsTrue(_driver.Title.Equals("Login"));            
+            Assert.IsTrue(_driver.Url.Equals("http://qa-managetlg.travelnxt.com/login?returnUrl=/"));
         }
 
         [Given(@"I have entered (.*) as the city")]
         public void GivenIHaveEnteredCity(string search)
         {
+            
             //Assert.IsTrue(_driver.Title.Equals("TLGAgencyTest :: Home"));
             //Assert.IsTrue(_driver.Url.Equals("http://qa-tlg.travelnxt.com/Main"));
             _hotelSearchPage.Search(search);                      
@@ -61,7 +62,7 @@ namespace HOTELpinSight.Pages
         [When(@"I click on Search button")]
         public void WhenIClickOnSearchButton()
         {
-            _hotelSearchPage.ClickSearchHotel();
+            _hotelSearchPage.ClickSearch();
         }
         
         [Then(@"Hotel search results should be displayed on screen")]

@@ -32,8 +32,8 @@ namespace AirDemo.Specs.AddToCart
         public virtual void FeatureSetup()
         {
             testRunner = TechTalk.SpecFlow.TestRunnerManager.GetTestRunner();
-            TechTalk.SpecFlow.FeatureInfo featureInfo = new TechTalk.SpecFlow.FeatureInfo(new System.Globalization.CultureInfo("en-US"), "Add to Cart", "\tIn order to add to cart an hotel room\r\n\tAs a pinSight user\r\n\tI want search hotel" +
-                    " results to be displayed on screen", ProgrammingLanguage.CSharp, new string[] {
+            TechTalk.SpecFlow.FeatureInfo featureInfo = new TechTalk.SpecFlow.FeatureInfo(new System.Globalization.CultureInfo("en-US"), "Add to Cart", "\tIn order to add to cart an hotel room\r\n\tAs a pinSight user\r\n\tI want to be able t" +
+                    "o add hotel reservation to cart", ProgrammingLanguage.CSharp, new string[] {
                         "sniff"});
             testRunner.OnFeatureStart(featureInfo);
         }
@@ -70,17 +70,17 @@ namespace AirDemo.Specs.AddToCart
         {
 #line 7
 #line 8
- testRunner.Given("That search resuts are displayed at pinSight", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
+ testRunner.Given("That search results are displayed at pinSight", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
 #line hidden
         }
         
         [NUnit.Framework.TestAttribute()]
         [NUnit.Framework.DescriptionAttribute("Add to Cart Room")]
-        [NUnit.Framework.CategoryAttribute("select")]
+        [NUnit.Framework.CategoryAttribute("addToCart")]
         public virtual void AddToCartRoom()
         {
             TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Add to Cart Room", new string[] {
-                        "select"});
+                        "addToCart"});
 #line 11
 this.ScenarioSetup(scenarioInfo);
 #line 7
@@ -88,10 +88,8 @@ this.FeatureBackground();
 #line 12
  testRunner.When("I click on Show Rooms button for the first hotel", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line 13
- testRunner.Then("Hotel details pop up window is displayed", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+ testRunner.And("I click on Add to Cart button for the first room", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line 14
- testRunner.When("I click on Add to Cart button for the first room", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
-#line 15
  testRunner.Then("Confirmation pop up offering to Checkout should be displayed", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
             this.ScenarioCleanup();
