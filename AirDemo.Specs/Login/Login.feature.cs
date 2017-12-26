@@ -75,7 +75,7 @@ this.ScenarioSetup(scenarioInfo);
 #line 7
  testRunner.Given("Given that I navigate to pinSight application", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
 #line 8
- testRunner.And("And I enter testuser@mailinator.com as the username", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+ testRunner.And("And I enter hnorte@travelleaders.com as the username", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line 9
  testRunner.And("I enter the password", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line 10

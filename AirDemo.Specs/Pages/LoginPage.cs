@@ -64,7 +64,7 @@ namespace HOTELpinSight.Pages
             }
 
             //driver.Navigate().GoToUrl(PAGE_URL);
-            driver.Url = ConfigurationManager.AppSettings["UAT_URL"];
+            driver.Url = ConfigurationManager.AppSettings["QA_URL"];
             WebDriverWait wait = new WebDriverWait(driver, TimeSpan.FromSeconds(10));
             wait.Until(d => d.Title.StartsWith("Login"));
             return new LoginPage(driver);

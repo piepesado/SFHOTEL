@@ -67,11 +67,13 @@ namespace HOTELpinSight.Pages
 
         public void SelectCheckIn()
         {
+            WaitForElementVisible(_checkInDatePicker);
             ((IJavaScriptExecutor)_driver).ExecuteScript("document.getElementById('input').removeAttribute('readonly',0);"); // Enables the from date box
 
 
             _checkInDatePicker.Clear();
             _checkInDatePicker.SendKeys("01/05/2018"); //Enter date in required format
+
             /*
             Actions selectCheckIn = new Actions(_driver);
             selectCheckIn.MoveToElement(_checkInDatePicker);

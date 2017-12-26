@@ -31,13 +31,16 @@ namespace HOTELpinSight.Pages
 
             _driver = WebDriverFactory.Create();
             _loginPage = LoginPage.NavigateTo(_driver);
-            _hotelSearchPage = _loginPage.Login("testuser@mailinator.com", "Test@123");
-            //Assert.IsTrue(_driver.Title.Equals("P UAT Agency(987654) :: Home"));
+            _hotelSearchPage = _loginPage.Login("hnorte@travelleaders.com", "zaq1ZAQ!");
+            //Assert.IsTrue(_driver.Title.Equals("Login"));            
+            //Assert.IsTrue(_driver.Url.Equals("https://qa-tlg.travelnxt.com/Login"));
         }
 
         [Given(@"I have entered (.*) as the city")]
         public void GivenIHaveEnteredCity(string search)
         {
+            //Assert.IsTrue(_driver.Title.Equals("TLGAgencyTest :: Home"));
+            //Assert.IsTrue(_driver.Url.Equals("http://qa-tlg.travelnxt.com/Main"));
             _hotelSearchPage.Search(search);                      
         }
         
