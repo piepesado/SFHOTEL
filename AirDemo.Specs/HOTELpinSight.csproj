@@ -59,6 +59,7 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Add to Cart\AddToCartSteps.cs" />
     <Compile Include="BrowserFactory.cs" />
     <Compile Include="Login\Login.feature.cs">
       <AutoGen>True</AutoGen>
@@ -78,6 +79,11 @@
     <Compile Include="Pages\LoginPage.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Search\SearchHotelSteps.cs" />
+    <Compile Include="Add to Cart\AddtoCart.feature.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>AddtoCart.feature</DependentUpon>
+    </Compile>
     <Compile Include="SeleniumExtensions.cs" />
     <Compile Include="WebDriverFactory.cs" />
   </ItemGroup>
@@ -96,6 +102,10 @@
     </None>
     <None Include="packages.config">
       <SubType>Designer</SubType>
+    </None>
+    <None Include="Add to Cart\AddtoCart.feature">
+      <Generator>SpecFlowSingleFileGenerator</Generator>
+      <LastGenOutput>AddtoCart.feature.cs</LastGenOutput>
     </None>
   </ItemGroup>
   <ItemGroup>

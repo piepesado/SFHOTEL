@@ -17,7 +17,7 @@ namespace HOTELpinSight.Pages
         [FindsBy(How = How.Id, Using = "ucPWP_ctl08_55218_lnkGoToBackOffice")]
         private IWebElement _backOfficeButton;
 
-        [FindsBy(How = How.XPath, Using = ".//*[@id='autoSuggest']")]
+        [FindsBy(How = How.Id, Using = "autoSuggest")]
         private IWebElement _search;
 
         [FindsBy(How = How.CssSelector, Using = "#dropBox>ul>li:nth-child(1)")]
@@ -29,7 +29,7 @@ namespace HOTELpinSight.Pages
         [FindsBy(How = How.Id, Using = "input")]
         private IWebElement _checkInDatePicker;
 
-        /*
+        
         [FindsBy(How = How.LinkText, Using = "Pick a year from the dropdown")]
         private IWebElement _checkInDatePickerYear;
 
@@ -41,7 +41,7 @@ namespace HOTELpinSight.Pages
 
         [FindsBy(How = How.LinkText, Using = "Go to the next month")]
         private IWebElement _checkInDatePickerNavNext;
-        */
+        
 
         [FindsBy(How = How.Id, Using = "input")]
         private IWebElement _checkOutDatePicker;
@@ -67,21 +67,21 @@ namespace HOTELpinSight.Pages
 
         public void SelectCheckIn()
         {
-            WaitForElementVisible(_checkInDatePicker);
-            ((IJavaScriptExecutor)_driver).ExecuteScript("document.getElementById('input').removeAttribute('readonly',0);"); // Enables the from date box
+            //WaitForElementVisible(_checkInDatePicker);
+            //((IJavaScriptExecutor)_driver).ExecuteScript("document.getElementById('input').removeAttribute('readonly',0);"); // Enables the from date box
 
 
-            _checkInDatePicker.Clear();
-            _checkInDatePicker.SendKeys("01/05/2018"); //Enter date in required format
+            //_checkInDatePicker.Clear();
+            //_checkInDatePicker.SendKeys("10/01/2018"); //Enter date in required format
 
-            /*
+            
             Actions selectCheckIn = new Actions(_driver);
             selectCheckIn.MoveToElement(_checkInDatePicker);
-            WaitForElementVisible(_checkInDatePicker);
+            //WaitForElementVisible(_checkInDatePicker);
             _checkInDatePicker.Click();
             if(_checkInDatePickerYear.Text != "2018")
                 new SelectElement(_checkInDatePickerYear).SelectByValue("2018");
-            new SelectElement(_checkInDatePickerMonth).SelectByValue("May");
+            new SelectElement(_checkInDatePickerMonth).SelectByValue("January");
 
             IList<IWebElement> rows = _checkInDatePicker.FindElements(By.TagName("tr"));
             IList<IWebElement> columns = _checkInDatePicker.FindElements(By.TagName("td"));
@@ -94,9 +94,7 @@ namespace HOTELpinSight.Pages
                     break;
                 }
             }
-
-            selectCheckIn.Perform();
-            */
+            selectCheckIn.Perform();            
         }
 
         public void SelectCheckOut()
@@ -138,6 +136,11 @@ namespace HOTELpinSight.Pages
             _searchButton.Click();
         }
         */
+
+        public void ClickSearchHotel()
+        {
+            _searchButton.Click();
+        }
 
         public void EnsurePageIsLoaded()
         {

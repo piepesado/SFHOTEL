@@ -17,7 +17,7 @@ namespace HOTELpinSight.Pages
         private LoginPage _loginPage;
         private HotelSearchPage _hotelSearchPage; //Check how to instanciate should be sth like new HotelSearchPage
         private SearchingPage _searchingPage;
-        private ResultsPage _resultsPage;
+        //private ResultsPage _resultsPage;
 
         [Given(@"That Im logged in at pinSight")]
         public void GivenThatImLoggedInAtPinSight()
@@ -43,11 +43,12 @@ namespace HOTELpinSight.Pages
             //Assert.IsTrue(_driver.Url.Equals("http://qa-tlg.travelnxt.com/Main"));
             _hotelSearchPage.Search(search);                      
         }
-        
+
+        /*
         [Given(@"I have entered checkin date")]
         public void GivenIHaveEnteredCheckinDate()
         {
-            //_hotelSearchPage.SelectCheckIn();
+            _hotelSearchPage.SelectCheckIn();
         }
         
         [Given(@"I have entered checkout date")]
@@ -55,11 +56,12 @@ namespace HOTELpinSight.Pages
         {
             _hotelSearchPage.SelectCheckOut();            
         }
+        */
         
         [When(@"I click on Search button")]
         public void WhenIClickOnSearchButton()
         {
-            //_hotelSearchPage.ClickSearchHotel();
+            _hotelSearchPage.ClickSearchHotel();
         }
         
         [Then(@"Hotel search results should be displayed on screen")]
